@@ -29,7 +29,7 @@ public class InFileSearchTask implements Runnable {
 		searchInFile();
 	}
 
-	private void searchInFile() {
+	public void searchInFile() {
 		Scanner in = null;
 		int foundedCount = 0;
 		try {
@@ -47,8 +47,6 @@ public class InFileSearchTask implements Runnable {
 				LOG.warn("Can't close file.", e);
 			}
 		}
-		// saveFileSearchResult(file, foundedCount);
-
 		LOG.info("#" + id + ": Founded " + foundedCount
 				+ " entire(s) in file: " + file.getAbsolutePath());
 
